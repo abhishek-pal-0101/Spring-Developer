@@ -12,7 +12,7 @@ public class Main {
 		Employee bean = ioc.getBean("emp1",Employee.class);
 		
 		System.out.println(bean);
-		
+
 	}
 
 }

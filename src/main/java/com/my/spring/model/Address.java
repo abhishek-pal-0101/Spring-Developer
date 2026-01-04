@@ -2,7 +2,7 @@ package com.my.spring.model;
 
 public class Address {
 
-	public Address() {
+	public Address() {//constructor
 		super();
 	}
 	
