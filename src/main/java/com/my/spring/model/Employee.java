@@ -1,9 +1,9 @@
 package com.my.spring.model;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+ 
+@Component
 public class Employee {
 
 		private int id;
@@ -16,23 +16,20 @@ public class Employee {
 			System.out.println("Employee.Employee()");
 		}
 	
-
-		public Employee(int id, String name, String gender, Address address, List<Integer> list, Set<Integer> set,
-				Map<Integer, String> map) {//parameterized constructor
+		public Employee(int id, String name, String gender, Address address) {
 			super();
 			this.id = id;
 			this.name = name;
 			this.gender = gender;
 			this.address = address;
-			System.out.println("Employee.Employee(7)");
 		}
-
 
 
 		public Address getAddress() {
 			return address;
 		}
 
+		@Autowired
 		public void setAddress(Address address) {
 			this.address = address;
 			System.out.println("Employee.setAddress()");
@@ -58,6 +55,11 @@ public class Employee {
 		public void setGender(String gender) {
 			System.out.println("Employee.setGender()");
 			this.gender = gender;
+		}
+
+		@Override
+		public String toString() {
+			return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
 		}
 		
 		

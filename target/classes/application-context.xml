@@ -17,6 +17,5 @@
 			<constructor-arg name="city" value="GZB" />
 			<constructor-arg name="state" value="UP" />
 		</bean>
-		
 
 </beans>
