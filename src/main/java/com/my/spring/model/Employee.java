@@ -8,7 +8,7 @@ public class Employee {
 
 		private int id;
 		private String name,gender;
-		
+		@Autowired
 		private Address address;
 		
 		public Employee() {//constructor
@@ -23,7 +23,7 @@ public class Employee {
 			this.gender = gender;
 			this.address = address;
 		}
-
+		
 
 		public Address getAddress() {
 			return address;
